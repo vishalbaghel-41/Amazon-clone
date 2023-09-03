@@ -137,6 +137,15 @@ span{
 }
 
 /* hero section */
+@keyframes changeShape {
+    from{
+        transform: scale(1);
+    }
+
+    to{
+        transform: scale(1.1);
+    }
+}
 .hero-section{
     background-image: url(hero_image.jpg);
     height: 380px;
@@ -144,6 +153,7 @@ span{
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    animation: changeShape 1s ease-in-out infinite alternate;
 }
 
 .hero-msg{
@@ -177,6 +187,12 @@ span{
     background-color: white;
     padding: 20px 0px 15px;
     margin-top: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.box:hover{
+    transform: scale(1.2);
+    background-color: orange;
 }
 
 .box-img{
